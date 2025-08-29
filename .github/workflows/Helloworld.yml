@@ -18,3 +18,4 @@ jobs:
            ls -l
            mkdir action
            pwd
+           ls -l
