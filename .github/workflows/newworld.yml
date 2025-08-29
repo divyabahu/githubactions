@@ -12,14 +12,14 @@ on:
 
 jobs:
     on_push:
-        if: ${{github.event_name == 'push'}}
+        if: ${{ github.event_name == 'push' }}
         runs-on: ubuntu-latest
         steps:
             - name: "running newworld workflow"
               run: echo "Running on push on main branch"
 
-    on_pull:
-        if: ${{github.event_name == 'pull_request'}}
+    on_pull_request:
+        if: ${{ github.event_name == 'pull_request' }}
         runs-on: ubuntu-latest
         steps:
             - name: "running new world workflow on pull"
