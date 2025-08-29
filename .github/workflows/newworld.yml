@@ -1,27 +1,24 @@
 name: "newworld ci pipeline"
 
 on:
-    push:
-        branches:
-            - main
-    pull_request:
-        branches:
-            - main
-
-
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-    on_push:
-        if: ${{ github.event_name == 'push' }}
-        runs-on: ubuntu-latest
-        steps:
-            - name: "running newworld workflow"
-              run: echo "Running on push on main branch"
+  on_push:
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: "running newworld workflow"
+        run: echo "Running on push on main branch"
 
-    on_pull_request:
-        if: ${{ github.event_name == 'pull_request' }}
-        runs-on: ubuntu-latest
-        steps:
-            - name: "running new world workflow on pull"
-              run: echo "running this on pull request on main branch"  
-
+  on_pull_request:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: "running new world workflow on pull"
+        run: echo "running this on pull request on main branch"
