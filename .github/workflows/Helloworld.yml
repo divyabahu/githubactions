@@ -19,3 +19,11 @@ jobs:
            mkdir action
            pwd
            ls -l
+
+  Second_world_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "mypersonal space"
+        run: |
+          ls
+          echo "welcome from job 2"
