@@ -16,4 +16,5 @@ jobs:
            echo "hello world"
            echo "available"
            ls -l
+           mkdir action
            pwd
